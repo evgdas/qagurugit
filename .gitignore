@@ -1,10 +1,6 @@
 # Compiled class file
 *.class
-.gradle/
-.idea/
-build/
-.allure/
-gradle/
+
 # Log file
 *.log
 
@@ -22,6 +18,24 @@ gradle/
 *.zip
 *.tar.gz
 *.rar
+*.iml
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Project gen files
+.idea
+.allure/
+.gradle/
+allure-results/
+gradle/
+build/
+bin/
+out/
+logs/
+target/
+.classpath
+.project
+.settings/org.eclipse.buildship.core.prefs
+.vscode
+/gradlew
+/gradlew.bat
+.todo
+local.properties

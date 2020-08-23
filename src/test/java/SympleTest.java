@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.greaterThan;
 public class SympleTest {
     @Test
     @DisplayName("Проверка умножения")
-    @Tag("jenkins_test")
+    @Tag("multiple_test")
     public void checkMultiple() {
         String a = System.getProperty("valA", "0");
         String b = System.getProperty("valB", "0");

@@ -53,9 +53,9 @@ tasks.withType(Test) {
 
 }
 
-task multiply_test(type: Test) {
+task jenkins_test(type: Test) {
     useJUnitPlatform {
-        includeTags 'jenkins_tests'
+        includeTags 'multiple_test'
 
     }
 }

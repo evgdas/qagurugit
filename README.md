@@ -8,6 +8,6 @@
 Проверка, что результат умножения больше нуля
 
 запуск теста:
-gradle multiply_test -DvalA=10, -DvalB=10
+gradle jenkins_test -DvalA=10, -DvalB=10
 
   

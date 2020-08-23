@@ -21,6 +21,7 @@ public class SympleTest {
         String a = System.getProperty("valA", "0");
         String b = System.getProperty("valB", "0");
         int c=Integer.parseInt(a) * Integer.parseInt(b);
+        System.out.println("a= "+a+" b= "+b+" c= "+c);
         parameter("Множитель а", a);
         parameter("Множитель b", b);
         step("Проверка результатов операции", () -> {

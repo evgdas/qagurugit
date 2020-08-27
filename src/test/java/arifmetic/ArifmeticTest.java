@@ -18,8 +18,8 @@ import static org.hamcrest.Matchers.greaterThan;
 
 @Owner("evgdas")
 @Feature("Работа с Jenkins")
-@TestInstance(TestInstance.Lifecycle.PER_METHOD)
-@Execution(ExecutionMode.CONCURRENT)
+//@TestInstance(TestInstance.Lifecycle.PER_METHOD)
+//@Execution(ExecutionMode.CONCURRENT)
 public class ArifmeticTest {
     static Logger logger = LoggerFactory.getLogger(ArifmeticTest.class);
     @Test

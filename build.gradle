@@ -51,13 +51,13 @@ dependencies {
 tasks.withType(Test) {
     systemProperties = System.properties
 
-    if (project.hasProperty('web_threads')) {
+    if (project.hasProperty('threads')) {
         systemProperties += [
                 'junit.jupiter.execution.parallel.enabled'                 : true,
                 'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
                 'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
                 'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
-                'junit.jupiter.execution.parallel.config.fixed.parallelism': project.getProperty('web_threads').toInteger()
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': project.getProperty('threads').toInteger()
         ]
     }
 

@@ -6,10 +6,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.junit.jupiter.api.parallel.ExecutionMode;
-import org.junit.jupiter.api.parallel.Execution;
 
 import static io.qameta.allure.Allure.parameter;
 import static io.qameta.allure.Allure.step;
@@ -19,24 +15,21 @@ import static org.hamcrest.Matchers.greaterThan;
 @Owner("evgdas")
 @Feature("Работа с Jenkins")
 @TestInstance(TestInstance.Lifecycle.PER_METHOD)
-//@Execution(ExecutionMode.CONCURRENT)
 public class ArifmeticTest {
-    static Logger logger = LoggerFactory.getLogger(ArifmeticTest.class);
     @Test
     @DisplayName("Проверка умножения")
     @Tag("multiple_test")
     public void checkMultiple() {
         String a = System.getProperty("valA", "0");
         String b = System.getProperty("valB", "0");
-        int c=Integer.parseInt(a) * Integer.parseInt(b);
-        logger.info("valA= "+a);
-        logger.info("valB= "+b);
-        logger.info("result= "+c);
+        int c = Integer.parseInt(a) * Integer.parseInt(b);
+
         parameter("Множитель а", a);
         parameter("Множитель b", b);
         step("Проверка результатов операции", () -> {
-           parameter("Результат c", c);
-           assertThat(c,greaterThan(0));
+            parameter("Результат c", c);
+
+            assertThat(c, greaterThan(0));
         });
     }
 
@@ -46,15 +39,15 @@ public class ArifmeticTest {
     public void isRightPlus() {
         String a = System.getProperty("valA", "0");
         String b = System.getProperty("valB", "0");
-        int c=Integer.parseInt(a) + Integer.parseInt(b);
-        logger.info("valA= "+a);
-        logger.info("valB= "+b);
-        logger.info("result= "+c);
+        int c = Integer.parseInt(a) + Integer.parseInt(b);
+
         parameter("Слагаемое а", a);
         parameter("Слагаемое b", b);
+
         step("Проверка результатов операции", () -> {
             parameter("Результат c", c);
-            assertThat(c,greaterThan(0));
+
+            assertThat(c, greaterThan(0));
         });
     }
 

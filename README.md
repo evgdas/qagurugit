@@ -7,11 +7,12 @@
 
 Проверка, что результат операций больше нуля
 
-запуск теста:
+запуск теста локально:
 gradle jenkins_test -Dvalue_a=10 -Dvalue_b=10 
 
-в Jenkinse параметр для gradle
- jenkins_test -Dvalue_a=${value_a} -Dvalue_b=${value_b} -Pthreads=2
+в Jenkinse параметр для gradle:
+
+jenkins_test -Dvalue_a=${value_a} -Dvalue_b=${value_b} 
 
  Можно добавить параметр для запуска тестов параллельно
  -Pthreads=2

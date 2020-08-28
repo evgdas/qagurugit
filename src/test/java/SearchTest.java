@@ -18,6 +18,7 @@ public class SearchTest extends BaseTest {
     @DisplayName("Поиск страницы selenide на Google.com")
     public void searchSelenideInGoogle() {
         parameter("Строка поиска","selenide");
+        
         step("Открытие страницы google.com", () -> {
             open("https://google.com");
         });

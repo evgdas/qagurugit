@@ -20,14 +20,14 @@ public class ArifmeticTest {
     @DisplayName("Проверка умножения")
     @Tag("multiple_test")
     public void checkMultiple() {
-        String a = System.getProperty("valA", "0");
-        String b = System.getProperty("valB", "0");
+        String a = System.getProperty("value_a", "0");
+        String b = System.getProperty("value_b", "0");
         int c = Integer.parseInt(a) * Integer.parseInt(b);
 
-        parameter("Множитель а", a);
-        parameter("Множитель b", b);
+        parameter("Множитель а = ", a);
+        parameter("Множитель b = ", b);
         step("Проверка результатов операции", () -> {
-            parameter("Результат c", c);
+            parameter("Результат c = ", c);
 
             assertThat(c, greaterThan(0));
         });
@@ -37,15 +37,15 @@ public class ArifmeticTest {
     @DisplayName("Проверка сложения")
     @Tag("plus_test")
     public void isRightPlus() {
-        String a = System.getProperty("valA", "0");
-        String b = System.getProperty("valB", "0");
+        String a = System.getProperty("value_a", "0");
+        String b = System.getProperty("value_b", "0");
         int c = Integer.parseInt(a) + Integer.parseInt(b);
 
-        parameter("Слагаемое а", a);
-        parameter("Слагаемое b", b);
+        parameter("Слагаемое а = ", a);
+        parameter("Слагаемое b = ", b);
 
         step("Проверка результатов операции", () -> {
-            parameter("Результат c", c);
+            parameter("Результат c = ", c);
 
             assertThat(c, greaterThan(0));
         });

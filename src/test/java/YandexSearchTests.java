@@ -12,6 +12,7 @@ public class YandexSearchTest {
     @DisplayName("Поиск страницы selenide на Yandex.ru")
     public void searchSelenideInYandex() {
         parameter("Строка поиска","selenide");
+        
         step("Открытие страницы yandex.ru", () -> {
             open("https://yandex.ru");
         });

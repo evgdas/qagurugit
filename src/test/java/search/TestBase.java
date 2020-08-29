@@ -22,13 +22,9 @@ public class TestBase {
 
     @AfterEach
     public void afterEach() {
-        String sessionId = getSessionId();
-
         attachScreenshot("Last screenshot");
         attachPageSource();
         attachAsText("Browser console logs", getConsoleLogs());
         closeWebDriver();
-
-        attachVideo(sessionId); // in browserstack video url generates after driver close
     }
 }

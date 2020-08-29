@@ -54,5 +54,4 @@ public class SearchTest extends TestBase {
                     text("selenide.org"));
         });
     }
-
 }
